@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyCpanCrztA3Ddm1D_2t7ndK0q4KUqkp4RY";
+const API_KEY = "AIzaSyBkevpO9i47UG3eZKbn4tfkxOz1neNqUFc";
 const SHEET_ID = "195GtYWh-fiT-gn0tK3Z4d_dPDycubvv5VG-oLGdliOQ";
 const RANGE = "Drug Formulary PKD Gombak";
 const API_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${encodeURIComponent(RANGE)}?key=${API_KEY}`;
