@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PKD Gombak Drug Formulary</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00695c" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #00695c;
+    }
+    .search-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    input, button {
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #e0f2f1;
+    }
+    #results p {
+      text-align: center;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <h2>PKD Gombak Drug Formulary</h2>
+  <div class="search-controls">
+    <input type="text" id="search" placeholder="Search by keyword..." />
+    <button onclick="searchDrug()">Search</button>
+  </div>
+
+  <div id="results">
+    <p>Use the search bar above to view drug information.</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js").then(() => {
+        console.log("✅ Service Worker registered");
+      }).catch(e => {
+        console.error("Service Worker registration failed:", e);
+      });
+    }
+  </script>
+</body>
+</html>
